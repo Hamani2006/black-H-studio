@@ -86,6 +86,7 @@ nav .menu {
  }
  #click:checked ~ ul{
      left: 0%;
+     z-index: 100;
  }
  nav ul li{
      margin: 40px 0;
