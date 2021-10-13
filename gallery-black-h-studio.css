@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*
+{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: black;
+}
+a{
+    text-decoration: none;
+}
+section h3{
+    position: fixed;
+    top: 45%;
+    color: rgb(255, 255, 255);
+    font-size: 70px;
+    text-transform: uppercase;
+}
+section h1 {
+    position: fixed;
+    top: -3%;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    font-size: 150px;
+    background: #1d1d1d;
+    height: 200px;
+}
+nav{
+    height: 80px;
+    background: #1d1d1d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px 0px 100px;
+    text-transform: uppercase;
+}
+nav .logo{
+    font-size: 33px;
+    color: rgb(0, 0, 0);
+    font-weight: 600; 
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    margin: 0 5px;
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active{
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+}
+nav .menu {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    display: none;
+    font-size: 22px;
+}
+ #click{
+     display: none;
+ }
+@media (max-width:940px){
+ nav ul{
+     position: fixed;
+     top: 80px;
+     left: -100%;
+     background: rgb(0, 0, 0);
+     height: 100vh;
+     width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+ }
+ nav .menu {
+     display: block;
+ }
+ #click:checked ~ ul{
+     left: 0%;
+ }
+ nav ul li{
+     margin: 40px 0;
+ }
+ nav ul li a{
+     font-size: 20px;
+     display: block;
+ }
+ nav ul li a:hover,
+nav ul li a.active{
+    color: #1d1d1d;
+    background: none;
+}
+}
+
+.container{
+    position: fixed;
+    position: fixed;
+    top: 25%;
+    right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    text-align: center;
+    align-items: center; 
+}
+
+.abtn{
+    -webkit-box-reflect: below 1px  linear-gradient(transparent,#0005);
+    width: 300px;
+    height: 100px;
+    border: none;
+    color: #000000;
+    background: #1d1d1d;
+    border-radius: 4px;
+    transition: ease-out 0.3;
+    transition: ease-out 0.3;
+    font-size: 55px;
+    outline: none;
+    border: solid 3px #1d1d1d;  
+    position: relative;
+    z-index: 1;
+    display: flex;
+flex-direction: row;
+justify-content:space-evenly ;
+align-items: center;
+text-align: center;
+text-decoration: none;
+text-transform: uppercase;
+} 
+
+.abtn:hover{
+    color: #1d1d1d;
+    cursor: pointer;
+}
+.abtn:before{
+    transition: 0.5 all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #000000;
+}
+
+.abtn:hover::before{
+    transition: 0.5S all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}

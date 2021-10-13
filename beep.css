@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 4px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(255, 255, 255);
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 55px;
+}
+.container a
+{
+ position: relative;
+ display: inline-block;
+ padding: 15px 30px;  
+ border: 2px solid #00ff22;   
+ margin: 40px; 
+ text-transform: uppercase;
+ font-weight: 600;         
+ text-decoration: none;
+ letter-spacing: 2px;
+ color: rgb(0, 0, 0);  
+ -webkit-box-reflect: below 1px  linear-gradient(transparent,#0005);  
+ transition: 0.5;
+ transition-delay: 0;                                                       
+}
+.container a:hover
+{
+    transition-delay: 1.5;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px #00ff22,
+                0 0 20px #00ff22,
+                0 0 40px #00ff22,
+                0 0 80px #00ff22,
+                0 0 160px #00ff22;
+
+    
+}
+.container a span 
+{
+  position: relative;
+  z-index: 100;
+}
+.container a::before
+{content: '';
+position: absolute;
+left: -20px;
+top: 50%;
+transform: translateY(-50%);
+width: 20px;
+height: 2px;
+background:#00ff22 ;
+box-shadow: 5px -8px 0 #00ff22,
+            5px  8px 0 #00ff22;  
+transition: width 0.5s, left 0.5s, height 0.5s,  
+box-shadow 0.5s;
+transition-delay: 1s,0.5s,0s,0s;
+}
+.container a:hover::before
+{
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  box-shadow: 5px 0 0 #00ff22,
+              5px 0 0 #00ff22;
+  transition-delay: 0s,0.5s,1s,1s;
+}
+
+
+
+.container a::after
+{content: '';
+position: absolute;
+right: -20px;
+top: 50%;
+transform: translateY(-50%);
+width: 20px;
+height: 2px;
+background:#00ff22 ;
+box-shadow: -5px -8px 0 #00ff22,
+            -5px  8px 0 #00ff22;  
+transition: width 0.5s, left 0.5s, height 0.5s,  
+box-shadow 0.5s;
+transition-delay: 1s,0.5s,0s,0s;
+}
+.container a:hover::after
+{
+  width: 60%;
+  height: 100%;
+  right: -2px;
+  box-shadow: -5px 0 0 #00ff22,
+              -5px 0 0 #00ff22;
+  transition-delay: 0s,0.5s,1s,1s;
+}
